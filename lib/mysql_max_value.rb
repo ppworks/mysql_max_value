@@ -22,6 +22,8 @@ class MysqlMaxValue
     def method_missing(name)
       if TYPES.keys.include? name
         class_variable_get("@@#{name}".to_sym) || class_variable_set("@@#{name}".to_sym, max_value(TYPES[name]))
+      else
+        super
       end
     end
 
