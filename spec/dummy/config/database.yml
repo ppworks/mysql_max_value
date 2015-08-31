@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: 'root'
+  password: ''
+  host: 'localhost'
+
+development:
+  <<: *default
+  database: mysql_max_value_develop
+
+test:
+  <<: *default
+  database: mysql_max_value_test
+
+production:
+  <<: *default
+  database: mysql_max_value_production
