@@ -50,4 +50,10 @@ class MysqlMaxValueTest < ActiveSupport::TestCase
     assert_kind_of Fixnum,
                    MysqlMaxValue.tinyint_signed
   end
+
+  def test_method_missing
+    assert_raise NoMethodError do
+      MysqlMaxValue.undefined_method
+    end
+  end
 end

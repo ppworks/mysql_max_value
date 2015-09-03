@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mysql_max_value (0.0.1)
+    mysql_max_value (1.0.0)
       mysql2 (~> 0.3.0)
       rails (>= 4.1)
 
